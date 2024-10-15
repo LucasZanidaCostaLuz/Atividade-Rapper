@@ -53,7 +53,7 @@ suspeitoRoutes.get("/:id", (req, res) => {
     const suspeito = suspeitos.find((s) => s.id == id)
 
     if (!suspeito) {
-        return res.status(404).json({ message: `Planeta com id ${id} não encontrado!`})
+        return res.status(404).json({ message: `Suspeito com id ${id} não encontrado!`})
     }
     return res.status(200).json(suspeito)
 })
@@ -91,7 +91,7 @@ suspeitoRoutes.delete("/:id", (req, res) => {
     const suspeito = suspeitos.find((s) => s.id == id)
 
     if (!suspeito) {
-        return res.status(404).json({ message: `Planeta com id ${id} não encontrado!`})
+        return res.status(404).json({ message: `Suspeito com id ${id} não encontrado!`})
     }
     
     suspeitos = suspeitos.filter((s) => s.id != id)
